@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深夜书屋</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="header">
+        <div class="wrapper">
+            <div class="logo">
+                <h1><a href="#">深夜书屋</a></h1>
+            </div>
+           
+            <div class="search">
+                <input type="text" placeholder="搜索">
+                <a href="#"></a>
+            </div>
+            <div class="user">
+                <ul>
+                    <li><a href="login.html">登录</a></li>
+
+                    <li><a href="register.html">注册</a></li>
+                    <li><a href="#">个人中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+     <div class="menu">
+                <ul>
+                    <li><a href="#c1">首页</a></li>
+                    <li><a href="#c2">热门榜单</a></li>
+                    <!-- <li><a href="#c3">作家名录</a></li> -->
+                    <li><a href="#c4">字里行间</a></li>
+                    <li><a href="#c5">经典书评</a></li>
+                    <li><a href="#c6">关于我们</a></li>
+                </ul>
+            </div>
+    <div class="bd">
+        <div class="left">
+            <a name="c5"></a>
+           <p> 李小龙一生的成就可谓是前无古人，后无来者，
+一代功夫巨星征服了全世界亿万影迷,成为了不
+朽传奇！而看了这本书后，我对李小龙又有了全
+新的认知，此书算是李小龙的自述合集,他虽是
+一个武者，但他浑身上下整个人又充满了哲学气
+息，
+他对武术的思考已经超越了武术本身，他还
+是个对生命有思考的哲学家,对武学有着深远见
+解的《生活的艺术家》！</p>
+        </div>
+        <div class="between">
+            <div class="carousel" style="position: relative; width: 100%; max-width: 600px; margin: 0 auto;">
+                <img src="./imgs/书架.jpg" alt="" class="carousel-img" style="width:100%; display:block;">
+                <img src="./imgs/轮2.jpg" alt="" class="carousel-img" style="width:100%; display:none;">
+                <img src="./imgs/轮3.jpg" alt="" class="carousel-img" style="width:100%; display:none;">
+                <button class="carousel-prev" style="position:absolute;top:50%;left:10px;transform:translateY(-50%);background:rgba(0,0,0,0.3);color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;">&#10094;</button>
+                <button class="carousel-next" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);background:rgba(0,0,0,0.3);color:#fff;border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;">&#10095;</button>
+            </div>
+            <script>
+                const imgs = document.querySelectorAll('.carousel-img');
+                const prev = document.querySelector('.carousel-prev');
+                const next = document.querySelector('.carousel-next');
+                let idx = 0;
+                function showImg(i) {
+                    imgs.forEach((img, j) => img.style.display = j === i ? 'block' : 'none');
+                }
+                prev.onclick = () => {
+                    idx = (idx - 1 + imgs.length) % imgs.length;
+                    showImg(idx);
+                };
+                next.onclick = () => {
+                    idx = (idx + 1) % imgs.length;
+                    showImg(idx);
+                };
+                setInterval(() => {
+                    idx = (idx + 1) % imgs.length;
+                    showImg(idx);
+                }, 3000);
+                showImg(idx);
+            </script>
+            
+            
+        </div>
+        <div class="right">
+          <p> 这是一本探索女性心灵和自我成长的读物。作者
+通过对女性成长历程和心理挑战的剖析，呈现了
+女性在社会和情感层面上的独特体验。这本书不
+仅为女性读者提供了情感疏导和自我探索的指
+引，
+也帮助男性读者更好地理解和支持女性成
+书中所述的“她世界，独特的心灵成长之
+长。
+旅”展现了女性的坚强和智慧，在探索自我和
+实现人生价值的道路上不断前行。</p>
+
+        </div>
+
+    </div>
+    <div class="hd">
+        <div class="z">
+            <img src="./imgs/书屋实况1.jpg" alt="">
+        </div>
+        <div class="y">
+            <div class="t">
+               <a name="c1">今日推荐</a> 
+            </div>
+            <div class="x">
+                <ul>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/三体.jpg">
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/活着.jpg">
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/月亮与六便士.jpg">
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/窄门.jpg">
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                           <img src="./imgs/瓦尔登湖.jpg">
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                           <img src="./imgs/丰乳肥臀.jpg">
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="t">
+                百年经典
+            </div>
+            <div class="x">
+                <ul>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/朝花夕拾.jpg">
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/红与黑.jpg">
+                            <!-- <h4>sidamingzhu</h4> -->
+                            <!-- <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/简爱.jpg">
+                            <!-- <h4>sidamingzhu</h4> -->
+                            <!-- <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/物种起源.jpg">
+                            <!-- <h4>sidamingzhu</h4> -->
+                            <!-- <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/爱丽丝梦游仙境.jpg">
+                            <!-- <h4>sidamingzhu</h4> -->
+                            <!-- <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/物种起源.jpg">
+                            <!-- <h4>sidamingzhu</h4> -->
+                            <!-- <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="t">
+                学科著作
+            </div>
+            <div class="x">
+                <ul>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/c.jpg">
+                            <!-- <h4>sidamingzhu</h4> -->
+                            <!-- <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/枪.jpg">
+                            <!-- <h4>sidamingzhu</h4>
+                            <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/宪法.jpg">
+                            <!-- <h4>sidamingzhu</h4>
+                            <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/微积分.jpg">
+                            <!-- <h4>sidamingzhu</h4>
+                            <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/量子力学.jpg">
+                            <!-- <h4>sidamingzhu</h4>
+                            <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/摄影.jpg">
+                            <!-- <h4>sidamingzhu</h4>
+                            <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="t">
+                网络文学
+            </div>
+            <div class="x">
+                <ul>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/1.jpg">
+                            <!-- <h4>sidamingzhu</h4>
+                            <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/2.jpg">
+                            <!-- <h4>sidamingzhu</h4>
+                            <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/3.jpg">
+                            <!-- <h4>sidamingzhu</h4>
+                            <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/4.jpg">
+                            <!-- <h4>sidamingzhu</h4>
+                            <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/5.jpg">
+                            <!-- <h4>sidamingzhu</h4>
+                            <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <img src="./imgs/6.jpg">
+                            <!-- <h4>sidamingzhu</h4>
+                            <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="pic"></div>
+                        <div class="text">
+                            <!-- <h4>sidamingzhu</h4>
+                            <p><span>jingdian</span>·<i>1125</i>renzaikan</p> -->
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="hot">
+        <div class="wrapper">
+            <div class="title">
+                <h2><a name="c2">热门榜单</a></h2>
+            </div>
+            </div>
+    </div>
+    <div class="h">
+        
+        <div class="ha">一周热门榜</div>
+        <div class="ha">畅销榜</div>
+        <div class="ha">2024年度图书</div>
+
+       
+    </div>
+   <div class="book-list">
+    
+    <!-- 第一列 -->
+    <div class="column">
+      <!-- <h2>1</h2> -->
+      <div class="book-item"><span>1</span>《太白金星有点烦》<span>马伯庸</span></div>
+      <div class="book-item"><span>2</span>《明亮的夜晚》<span>崔恩荣</span></div>
+      <div class="book-item"><span>3</span>《上野千鹤子的午后时光》<span>上野千鹤子</span></div>
+      <div class="book-item"><span>4</span>《五四婚姻》<span>孔慧怡</span></div>
+      <div class="book-item"><span>5</span>《宋慈洗冤笔记》<span>巫童</span></div>
+      <div class="book-item"><span>6</span>《涅朵奇卡》<span>陀思妥耶夫斯基</span></div>
+      <div class="book-item"><span>7</span>《成为雍正》<span>李正</span></div>
+      <div class="book-item"><span>8</span>《读库2305》<span>张立宪 主编</span></div>
+      <div class="book-item"><span>9</span>《埃隆·马斯克传》<span>沃尔特·艾萨克森</span></div>
+      <div class="book-item"><span>10</span>《无薪主妇》<span>上野千鹤子</span></div>
+    </div>
+    <!-- 第二列 -->
+    <div class="column">
+      <!-- <h2>2</h2> -->
+      <div class="book-item"><span>1</span>《我与地坛》<span>史铁生</span></div>
+      <div class="book-item"><span>2</span>《活着》<span>余华</span></div>
+      <div class="book-item"><span>3</span>《额尔古纳河右岸》<span>迟子建</span></div>
+      <div class="book-item"><span>4</span>《长安的荔枝》<span>马伯庸</span></div>
+      <div class="book-item"><span>5</span>《绿毛水怪》<span>王小波</span></div>
+      <div class="book-item"><span>6</span>《围城》<span>钱钟书</span></div>
+      <div class="book-item"><span>7</span>《厌女》<span>上野千鹤子</span></div>
+      <div class="book-item"><span>8</span>《小王子》<span>安托万·埃克苏佩里</span></div>
+      <div class="book-item"><span>9</span>《明朝那些事儿》<span>当年明月</span></div>
+      <div class="book-item"><span>10</span>《三体》<span>刘慈欣</span></div>
+    </div>
+    <!-- 第三列 -->
+    <div class="column">
+      <!-- <h2>3</h2> -->
+      <div class="book-item"><span>1</span>《始于极限》<span>上野千鹤子</span></div>
+      <div class="book-item"><span>2</span>《可能性的艺术》<span>刘瑜</span></div>
+      <div class="book-item"><span>3</span>《足利女童连续失踪事件》<span>清水洁</span></div>
+      <div class="book-item"><span>4</span>《如雪如山》<span>张天翼</span></div>
+      <div class="book-item"><span>5</span>《我本芬芳》<span>杨本芬</span></div>
+      <div class="book-item"><span>6</span>《看不见的女性》<span>卡罗琳·佩雷斯</span></div>
+      <div class="book-item"><span>7</span>《必有人重写爱情》<span>北岛</span></div>
+      <div class="book-item"><span>8</span>《应得的权利》<span>凯特·曼恩</span></div>
+      <div class="book-item"><span>9</span>《漫长的余生》<span>罗新</span></div>
+      <div class="book-item"><span>10</span>《当我们不再理解世界》<span>本哈明·拉巴图特</span></div>
+    </div>
+    
+  </div>
+   
+                
+<div class="chao">
+        <div class="wrapper">
+            <div class="title2">
+                <h2><a name="c4">字里行间</a></h2>
+            </div>
+            </div>
+    </div>
+    <div class="h2">
+        <ul>
+            <div><li><img src="./imgs/人间失格.jpg"><p>这世上所有人的说话方式，总是显得转弯抹角，
+                云里雾里混沌不清，带有一种试图逃避责任的微妙的复杂性。</p></li></div>
+            <li><img src="./imgs/小王子.jpg"><p>如果有人爱上一朵花——一朵世界上独一无二的花，她只长在一颗星星上，当这个人望着满天星星的时候，他就会觉得很幸福。他会对自己说，我的花儿就长在其中的一颗星星上……但要是小羊把这朵花儿吃掉了，
+                那么，所有的星星就会在他眼里一下子失去光芒，这难道也不重要吗？”</p></li>
+            <li><img src="./imgs/山.jpg"><p>我喜欢大自然，喜欢日升日落，喜欢枝头上的那颗露珠，喜欢随风自由
+                摇摆的稻穗，更喜欢妈妈眼中的温柔，所以我回到了浦市古镇。</p></li>
+           
+        </ul>
+    </div>
+     <footer >
+        <a name="c6"></a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>三味书屋</h3>
+                    <p style="color: #f7f8f8; margin-bottom: 20px;">我们致力于推广阅读文化，提供高品质的图书阅读体验。</p>
+                    <p>关注我们，获取最新书籍推荐和活动信息。</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">服务条款</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>图书分类</h3>
+                    <ul>
+                        <li><a href="#">文学小说</a></li>
+                        <li><a href="#">人文社科</a></li>
+                        <li><a href="#">经济管理</a></li>
+                        <li><a href="#">科学技术</a></li>
+                        <li><a href="#">艺术设计</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>联系我们</h3>
+                    <ul>
+                        <li><i style="margin-right: 10px;"></i> 河南省开封市顺河回族区</li>
+                        <li><i style="margin-right: 10px;"></i> 500-143-4510</li>
+                        <li><i style="margin-right: 10px;"></i> info@moxiang.com</li>
+                        <li><i style="margin-right: 10px;"></i> 周一至周日 9:00-21:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 三味书屋 版权所有 | 打造最有温度的书店</p>
+            </div>
+        </div>
+    </footer>
+</body>
